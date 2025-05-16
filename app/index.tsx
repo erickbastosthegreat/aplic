@@ -9,9 +9,25 @@ export default function HomeScreen(){
     const router = useRouter();
     const [count, setCount] = useState(0);
     const [nome, setNome] = useState(name);
-    const STARVALUE = 0
+    const STARVALUE = 0;
 
-    
+    return(
+        <View>
+            <Button 
+            title="Stack navigation" 
+            onPress={() => router.push('/navigation/stack')}
+            />
+            <Button 
+            title="Tabs navigation" 
+            onPress={() => router.push('/navigation/tabs')}
+            />
+            <Button 
+            title="Drawer navigation" 
+            onPress={() => router.push('/navigation/drawer')}
+            />
+        </View>
+    );
+
 
     function alterarCount (value:number){
         setCount(count + value);
@@ -38,13 +54,5 @@ export default function HomeScreen(){
             <Form/>  
         </View>
     );
-    return (
-        <View>
-            <Text> teste </Text>
-           
-            <Button 
-            title="Personagens" 
-            onPress={() => router.push('/characters/')}/>
-        </View> 
-    );
+
 }
